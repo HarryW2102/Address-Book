@@ -1,0 +1,7 @@
+
+<__main__.contact object at 0x0215AEF0>
+<__main__.contact object at 0x010FB170>
+
+<class '__main__.contact'>
+<class '__main__.contact'>
+<class '__main__.contact'>

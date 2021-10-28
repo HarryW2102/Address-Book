@@ -23,6 +23,11 @@ if __name__=="__main__":
 
 
 
+    file = open('contactinfo.txt','a')
+    file.write('\n' + str(contact))
+    file.close()
+    
+
 
 
 
