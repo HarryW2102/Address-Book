@@ -5,3 +5,7 @@
 <class '__main__.contact'>
 <class '__main__.contact'>
 <class '__main__.contact'>
+<class '__main__.contact'>
+<class '__main__.contact'>
+Age: harry
+('Age: Harry', 'Phone Number: djwa', 'Address: a', 'Date of Birth: a')
