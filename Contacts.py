@@ -25,6 +25,20 @@ if __name__=="__main__":
         file.close()
     else:
         print("No more contacts will be added")
+#reference for searchbar https://www.kite.com/python/answers/how-to-search-for-text-in-a-file-in-python
+        findcon = input("Do you want to find a contacts' information? Yes/No ")
+        while findcon =='Yes':
+            conname = input("What is the name of the contact you are looking for?")
+            contact = open("contactinfo.txt")
+            for line in contact:
+                if conname in line:
+                    print(line)
+
+
+
+
+
+
 
 
 

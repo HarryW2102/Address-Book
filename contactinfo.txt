@@ -1,14 +1,4 @@
 
-<__main__.contact object at 0x0215AEF0>
-<__main__.contact object at 0x010FB170>
-
-<class '__main__.contact'>
-<class '__main__.contact'>
-<class '__main__.contact'>
-<class '__main__.contact'>
-<class '__main__.contact'>
-Age: harry
-('Age: Harry', 'Phone Number: djwa', 'Address: a', 'Date of Birth: a')
-('Age: mat', 'Phone Number: 12939219321', 'Address: sadsa', 'Date of Birth: sada')
-('Age: Harry', 'Phone Number: 01293129321', 'Address: st james', 'Date of Birth: 21122002')
-('Age: Matt', 'Phone Number: 1232013012', 'Address: ncl', 'Date of Birth: 241103')
+('Age: Harry', 'Phone Number: 01230120312', 'Address: sada', 'Date of Birth: as')
+('Age: Harry', 'Phone Number: 120321312', 'Address: 12', 'Date of Birth: 12')
+('Age: matt', 'Phone Number: 12321321', 'Address: asd', 'Date of Birth: as')
