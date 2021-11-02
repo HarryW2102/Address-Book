@@ -9,3 +9,6 @@
 <class '__main__.contact'>
 Age: harry
 ('Age: Harry', 'Phone Number: djwa', 'Address: a', 'Date of Birth: a')
+('Age: mat', 'Phone Number: 12939219321', 'Address: sadsa', 'Date of Birth: sada')
+('Age: Harry', 'Phone Number: 01293129321', 'Address: st james', 'Date of Birth: 21122002')
+('Age: Matt', 'Phone Number: 1232013012', 'Address: ncl', 'Date of Birth: 241103')
