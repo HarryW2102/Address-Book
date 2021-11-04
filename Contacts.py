@@ -1,5 +1,5 @@
 import sys
-
+import fileinput
 class contact:
     def __init__(self, name, phone_num, address, dob):
         self.name = name
@@ -34,8 +34,22 @@ if __name__=="__main__":
             for line in contact:
                 if conname in line:
                     print(line)
+
         else:
             print("Program completed")
+
+        replaceinfo = input("Do you want to change a contacts' information? Yes/No ")
+        while replaceinfo =='Yes':
+
+            def replace_in_file(contactinfo, search_text, new_text):
+                with fileinput.input(contactinfo, inplace=True) as f:
+                    for line in f:
+                        new_line = line.replace(search_text, new_text)
+                        print(new_line, end='')
+
+        else:
+            print("Program closed")
+
 
 
 
