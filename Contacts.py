@@ -34,7 +34,7 @@ if __name__=="__main__":
             for line in contact:
                 if conname in line:
                     print(line)
-
+            findcon = input("Do you want to find a contacts' information? Yes/No ")
         else:
             print("Program completed")
 
@@ -52,9 +52,18 @@ if __name__=="__main__":
         if replaceconinfo1 == ("Name"):
             newname = input("What new name do you want to replace it with?")
             with open("contactinfo.txt") as r:
-                text= r.read().replace(replacecon, newname)
+                text = r.read().replace(replacecon, newname)
             with open("contactinfo.txt", "w") as w:
                 w.write(text)
+
+        if replaceconinfo1 == ("Phone Number"):
+
+            newphonenum = input("What new number do you want to change it to? ")
+            with open("contactinfo.txt") as r:
+                text = r.read().replace(replacecon, newphonenum)
+            with open("contactinfo.txt", "w") as w:
+                w.write(text)
+
 
 
 
