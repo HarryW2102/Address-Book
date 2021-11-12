@@ -14,12 +14,12 @@ if __name__=="__main__":
     while answer == 'Yes':
         con1 = contact(input(str("Enter your first name ")), input(str("Enter your phone number ")), input(str("Enter your address ")),
                        input(str("Enter your dob ")))
-        print("Age: " + con1.name)
+        print("Name: " + con1.name)
         print("Phone Number: " + con1.phone_num)
         print("Address: " + con1.address)
         print("Date of Birth: " + con1.dob)
         answer = input("Do you want to add another contact Yes/No ")
-        Info = "Age: " + con1.name, "Phone Number: " + con1.phone_num, "Address: " + con1.address, "Date of Birth: " + con1.dob
+        Info = "Name: " + con1.name, "Phone Number: " + con1.phone_num, "Address: " + con1.address, "Date of Birth: " + con1.dob
         file = open('contactinfo.txt', 'a')
         file.write('\n' + str(Info))
         file.close()
@@ -29,7 +29,7 @@ if __name__=="__main__":
         findcon = input("Do you want to find a contacts' information? Yes/No ")
         while findcon =='Yes':
             # reference for searchbar https://www.kite.com/python/answers/how-to-search-for-text-in-a-file-in-python
-            conname = input("What is the name of the contact you are looking for?")
+            conname = input("What is the name of the contact you are looking for? ")
             contact = open("contactinfo.txt")
             for line in contact:
                 if conname in line:
@@ -49,6 +49,13 @@ if __name__=="__main__":
             if replacecon in line:
                 print(line)
         replaceconinfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
+        if replaceconinfo1 == ("Name"):
+            newname = input("What new name do you want to replace it with?")
+            with open("contactinfo.txt") as r:
+                text= r.read().replace(replacecon, newname)
+            with open("contactinfo.txt", "w") as w:
+                w.write(text)
+
 
 
             #file = open("contactinfo.txt")
@@ -63,7 +70,7 @@ if __name__=="__main__":
                         #print(new_line, end='')
 
 else:
-    print("Program closed")
+     print("Program closed")
 
 
 
