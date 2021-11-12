@@ -38,17 +38,32 @@ if __name__=="__main__":
         else:
             print("Program completed")
 
-        replaceinfo = input("Do you want to change a contacts' information? Yes/No ")
-        while replaceinfo =='Yes':
+        replacecon = input("Do you want to change a contacts' information? Yes/No ")
+        while replacecon =='Yes':
+            replacecon = input("What is the Contact's name for which you want information to be changed? ")
+            #if input == (open("contactinfo.txt", conname)):
 
-            def replace_in_file(contactinfo, search_text, new_text):
-                with fileinput.input(contactinfo, inplace=True) as f:
-                    for line in f:
-                        new_line = line.replace(search_text, new_text)
-                        print(new_line, end='')
 
-        else:
-            print("Program closed")
+        contact = open("contactinfo.txt")
+        for line in contact:
+            if replacecon in line:
+                print(line)
+        replaceconinfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
+
+
+            #file = open("contactinfo.txt")
+            #for line in file:
+                #file.write(line.replace(ConInfo))
+                #file.close()
+
+            #def replace_in_file(contactinfo, search_text, new_text):
+                #with fileinput.input(contactinfo, inplace=True) as f:
+                    #for line in f:
+                        #new_line = line.replace(search_text, new_text)
+                        #print(new_line, end='')
+
+else:
+    print("Program closed")
 
 
 
