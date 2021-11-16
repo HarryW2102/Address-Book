@@ -10,57 +10,68 @@ class contact:
 if __name__=="__main__":
 
 
-    answer = input("Do you want to add another contact Yes/No ")
-    while answer == 'Yes':
-        con1 = contact(input(str("Enter your first name ")), input(str("Enter your phone number ")), input(str("Enter your address ")),
+    EveryCon = input("Do you want to see all contacts available? Yes/No ")
+    if EveryCon =='Yes':
+        file = open("contactinfo.txt")
+        lines = file.readlines()
+        for line in lines:
+            print (line)
+        file.close()
+    else:
+        print("")
+
+
+    Answer = input("Do you want to add another contact Yes/No ")
+    while Answer == 'Yes':
+        Con1 = contact(input(str("Enter your first name ")), input(str("Enter your phone number ")), input(str("Enter your address ")),
                        input(str("Enter your dob ")))
-        print("Name: " + con1.name)
-        print("Phone Number: " + con1.phone_num)
-        print("Address: " + con1.address)
-        print("Date of Birth: " + con1.dob)
-        answer = input("Do you want to add another contact Yes/No ")
-        Info = "Name: " + con1.name, "Phone Number: " + con1.phone_num, "Address: " + con1.address, "Date of Birth: " + con1.dob
+        print("Name: " + Con1.name)
+        print("Phone Number: " + Con1.phone_num)
+        print("Address: " + Con1.address)
+        print("Date of Birth: " + Con1.dob)
+        Answer = input("Do you want to add another contact Yes/No ")
+        Info = "Name: " + Con1.name, "Phone Number: " + Con1.phone_num, "Address: " + Con1.address, "Date of Birth: " + Con1.dob
         file = open('contactinfo.txt', 'a')
         file.write('\n' + str(Info))
         file.close()
     else:
         print("No more contacts will be added")
 
-        findcon = input("Do you want to find a contacts' information? Yes/No ")
-        while findcon =='Yes':
+        FindCon = input("Do you want to find a contacts' information? Yes/No ")
+        while FindCon =='Yes':
             # reference for searchbar https://www.kite.com/python/answers/how-to-search-for-text-in-a-file-in-python
-            conname = input("What is the name of the contact you are looking for? ")
-            contact = open("contactinfo.txt")
+            ConName = input("What is the name of the contact you are looking for? ")
+            Contact = open("contactinfo.txt")
             for line in contact:
-                if conname in line:
+                if ConName in line:
                     print(line)
-            findcon = input("Do you want to find a contacts' information? Yes/No ")
+            FindCon = input("Do you want to find a contacts' information? Yes/No ")
         else:
-            print("Program completed")
+            print("")
 
-        replacecon = input("Do you want to change a contacts' information? Yes/No ")
-        while replacecon =='Yes':
-            replacecon = input("What is the Contact's name for which you want information to be changed? ")
+        ReplaceCon = input("Do you want to change a contacts' information? Yes/No ")
+        while ReplaceCon =='Yes':
+            ReplaceCon = input("What is the Contact's name for which you want information to be changed? ")
             #if input == (open("contactinfo.txt", conname)):
 
 
         contact = open("contactinfo.txt")
         for line in contact:
-            if replacecon in line:
+            if ReplaceCon in line:
                 print(line)
-        replaceconinfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
-        if replaceconinfo1 == ("Name"):
-            newname = input("What new name do you want to replace it with?")
+        ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
+        if ReplaceConInfo1 == ("Name"):
+            NewName = input("What new name do you want to replace it with?")
             with open("contactinfo.txt") as r:
-                text = r.read().replace(replacecon, newname)
+                text = r.read().replace(ReplaceCon, NewName)
             with open("contactinfo.txt", "w") as w:
                 w.write(text)
 
-        if replaceconinfo1 == ("Phone Number"):
+        if ReplaceConInfo1 == ("Phone Number"):
 
-            newphonenum = input("What new number do you want to change it to? ")
+            NewPhoneNum = input("What new number do you want to change it to? ")
             with open("contactinfo.txt") as r:
-                text = r.read().replace(replacecon, newphonenum)
+                text = r.read().replace(ReplaceCon, NewPhoneNum)
             with open("contactinfo.txt", "w") as w:
                 w.write(text)
 
@@ -78,8 +89,8 @@ if __name__=="__main__":
                         #new_line = line.replace(search_text, new_text)
                         #print(new_line, end='')
 
-else:
-     print("Program closed")
+        else:
+            print("Program closed")
 
 
 
