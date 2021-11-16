@@ -7,3 +7,4 @@
 ('Name: Tom', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
 ('Name: John', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
 
+maybe find code to search for second colon on the line and print what ever is after it.
