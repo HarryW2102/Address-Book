@@ -1,5 +1,6 @@
 import sys
 import fileinput
+import os
 class contact:
     def __init__(self, name, phone_num, address, dob):
         self.name = name
@@ -49,6 +50,29 @@ if __name__=="__main__":
         else:
             print("")
 
+
+    DeleteCon = input("Do you want to delete a contact? Yes/No ")
+
+    if DeleteCon == 'Yes':
+        DeleteCon1 = input("What is the Contact's name for which you want information to be changed? ")
+        with open("contactinfo.txt", 'r') as input:
+            with open("contactinfo.txt", 'w') as output:
+                for line in input:
+                    if (DeleteCon1) not in line.strip("\n"):
+                        output.write(line)
+
+    else:
+        print("")
+
+
+
+
+
+
+
+
+
+
         ReplaceCon = input("Do you want to change a contacts' information? Yes/No ")
         while ReplaceCon =='Yes':
             ReplaceCon = input("What is the Contact's name for which you want information to be changed? ")
@@ -61,7 +85,7 @@ if __name__=="__main__":
                     print(line)
             ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
             if ReplaceConInfo1 == ("Name"):
-                NewName = input("What new name do you want to replace it with?")
+                NewName = input("What new name do you want to replace it with? ")
                 with open("contactinfo.txt") as r:
                     text = r.read().replace(ReplaceCon, NewName)
                 with open("contactinfo.txt", "w") as w:

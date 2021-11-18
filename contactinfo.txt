@@ -1,10 +1,5 @@
-
-('Name: Harry', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: asjhlasa', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Rehamn', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Lily', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Ben', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Tom', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: John', 'Phone Number: 01293129321', 'Address: ncl', 'Date of Birth: 21/12/02')
-
-maybe find code to search for second colon on the line and print what ever is after it.
+('Name: Harry', 'Phone Number: 012301203021', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Bob', 'Phone Number: 0123654633021', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Matt', 'Phone Number: 01230543533021', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Smith', 'Phone Number: 0154353403021', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Barry', 'Phone Number: 01274753021', 'Address: ncl', 'Date of Birth: 21/12/02')
