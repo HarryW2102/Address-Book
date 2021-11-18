@@ -42,7 +42,7 @@ if __name__=="__main__":
             # reference for searchbar https://www.kite.com/python/answers/how-to-search-for-text-in-a-file-in-python
             ConName = input("What is the name of the contact you are looking for? ")
             Contact = open("contactinfo.txt")
-            for line in contact:
+            for line in Contact:
                 if ConName in line:
                     print(line)
             FindCon = input("Do you want to find a contacts' information? Yes/No ")
@@ -55,25 +55,27 @@ if __name__=="__main__":
             #if input == (open("contactinfo.txt", conname)):
 
 
-        contact = open("contactinfo.txt")
-        for line in contact:
-            if ReplaceCon in line:
-                print(line)
-        ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
-        if ReplaceConInfo1 == ("Name"):
-            NewName = input("What new name do you want to replace it with?")
-            with open("contactinfo.txt") as r:
-                text = r.read().replace(ReplaceCon, NewName)
-            with open("contactinfo.txt", "w") as w:
-                w.write(text)
+            contact = open("contactinfo.txt")
+            for line in contact:
+                if ReplaceCon in line:
+                    print(line)
+            ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
+            if ReplaceConInfo1 == ("Name"):
+                NewName = input("What new name do you want to replace it with?")
+                with open("contactinfo.txt") as r:
+                    text = r.read().replace(ReplaceCon, NewName)
+                with open("contactinfo.txt", "w") as w:
+                    w.write(text)
+        else:
+            print("Program closed")
 
-        if ReplaceConInfo1 == ("Phone Number"):
+        #if ReplaceConInfo1 == ("Phone Number"):
 
-            NewPhoneNum = input("What new number do you want to change it to? ")
-            with open("contactinfo.txt") as r:
-                text = r.read().replace(ReplaceCon, NewPhoneNum)
-            with open("contactinfo.txt", "w") as w:
-                w.write(text)
+           # NewPhoneNum = input("What new number do you want to change it to? ")
+            #with open("contactinfo.txt") as r:
+               # text = r.read().replace(ReplaceCon, NewPhoneNum)
+           # with open("contactinfo.txt", "w") as w:
+               # w.write(text)
 
 
 
@@ -89,8 +91,8 @@ if __name__=="__main__":
                         #new_line = line.replace(search_text, new_text)
                         #print(new_line, end='')
 
-        else:
-            print("Program closed")
+       # else:
+            #print("Program closed")
 
 
 
