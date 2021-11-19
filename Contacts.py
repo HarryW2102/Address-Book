@@ -1,6 +1,6 @@
 import sys
 import fileinput
-import os
+
 class contact:
     def __init__(self, name, phone_num, address, dob):
         self.name = name
@@ -24,7 +24,7 @@ if __name__=="__main__":
 
     Answer = input("Do you want to add another contact Yes/No ")
     while Answer == 'Yes':
-        Con1 = contact(input(str("Enter your first name ")), input(str("Enter your phone number ")), input(str("Enter your address ")),
+        Con1 = contact(input(str("Enter your full name ")), input(str("Enter your phone number ")), input(str("Enter your address ")),
                        input(str("Enter your dob ")))
         print("Name: " + Con1.name)
         print("Phone Number: " + Con1.phone_num)
