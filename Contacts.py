@@ -54,44 +54,42 @@ if __name__=="__main__":
     DeleteCon = input("Do you want to delete a contact? Yes/No ")
 
     if DeleteCon == 'Yes':
-        DeleteCon1 = input("What is the Contact's name for which you want information to be changed? ")
-        with open("contactinfo.txt", 'r') as input:
-            with open("contactinfo.txt", 'w') as output:
-                for line in input:
-                    if (DeleteCon1) not in line.strip("\n"):
-                        output.write(line)
+        f = open("contactinfo.txt")
+        NameChange = input("What is the Contact's name for which you want information to be changed? ")
+
+        with open("contactinfo.txt", 'r') as file:
+            lines = file.readlines()
+        with open("contactinfo.txt", 'w') as file:
+            for line in lines:
+                if line.find(NameChange) != -1:
+                    pass
+                else:
+                    file.write(line)
+        DeleteCon = input("Do you want to delete a contact? Yes/No ")
 
     else:
+
         print("")
 
+    ReplaceCon = input("Do you want to change a contacts' information? Yes/No ")
+    while ReplaceCon =='Yes':
+        ReplaceCon = input("What is the Contact's name for which you want information to be changed? ")
 
 
 
-
-
-
-
-
-
-        ReplaceCon = input("Do you want to change a contacts' information? Yes/No ")
-        while ReplaceCon =='Yes':
-            ReplaceCon = input("What is the Contact's name for which you want information to be changed? ")
-            #if input == (open("contactinfo.txt", conname)):
-
-
-            contact = open("contactinfo.txt")
-            for line in contact:
-                if ReplaceCon in line:
-                    print(line)
-            ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
-            if ReplaceConInfo1 == ("Name"):
-                NewName = input("What new name do you want to replace it with? ")
-                with open("contactinfo.txt") as r:
-                    text = r.read().replace(ReplaceCon, NewName)
-                with open("contactinfo.txt", "w") as w:
-                    w.write(text)
-        else:
-            print("Program closed")
+        contact = open("contactinfo.txt")
+        for line in contact:
+            if ReplaceCon in line:
+                print(line)
+        ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
+        if ReplaceConInfo1 == ("Name"):
+            NewName = input("What new name do you want to replace it with? ")
+            with open("contactinfo.txt") as r:
+                text = r.read().replace(ReplaceCon, NewName)
+            with open("contactinfo.txt", "w") as w:
+                w.write(text)
+    else:
+        print("Program closed")
 
         #if ReplaceConInfo1 == ("Phone Number"):
 
@@ -104,19 +102,7 @@ if __name__=="__main__":
 
 
 
-            #file = open("contactinfo.txt")
-            #for line in file:
-                #file.write(line.replace(ConInfo))
-                #file.close()
 
-            #def replace_in_file(contactinfo, search_text, new_text):
-                #with fileinput.input(contactinfo, inplace=True) as f:
-                    #for line in f:
-                        #new_line = line.replace(search_text, new_text)
-                        #print(new_line, end='')
-
-       # else:
-            #print("Program closed")
 
 
 
