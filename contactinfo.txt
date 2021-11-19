@@ -1,4 +1,2 @@
-('Name: Barry', 'Phone Number: 20390210321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Jim', 'Phone Number: 20390210321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Tim', 'Phone Number: 20390210321', 'Address: ncl', 'Date of Birth: 21/12/02')
-('Name: Harry', 'Phone Number: 92389120321', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Harry', 'Phone Number: 20390210321', 'Address: ncl', 'Date of Birth: 21/12/02')
+('Name: Tom', 'Phone Number: 6590210321', 'Address: ncl', 'Date of Birth: 21/12/02')

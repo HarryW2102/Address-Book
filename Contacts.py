@@ -55,7 +55,7 @@ if __name__=="__main__":
 
     if DeleteCon == 'Yes':
         f = open("contactinfo.txt")
-        NameChange = input("What is the Contact's name for which you want information to be changed? ")
+        NameChange = input("What is the Contact's name for which you want all their information to be deleted from? ")
 
         with open("contactinfo.txt", 'r') as file:
             lines = file.readlines()
@@ -65,39 +65,31 @@ if __name__=="__main__":
                     pass
                 else:
                     file.write(line)
+        print("Contact has been successfully deleted")
+
         DeleteCon = input("Do you want to delete a contact? Yes/No ")
 
     else:
-
         print("")
 
-    ReplaceCon = input("Do you want to change a contacts' information? Yes/No ")
+    ReplaceCon = input("Do you want to change a contacts' name? Yes/No ")
     while ReplaceCon =='Yes':
         ReplaceCon = input("What is the Contact's name for which you want information to be changed? ")
-
-
 
         contact = open("contactinfo.txt")
         for line in contact:
             if ReplaceCon in line:
                 print(line)
-        ReplaceConInfo1 = input("What do you want to change? Name/Phone Number/Address/DOB ")
-        if ReplaceConInfo1 == ("Name"):
-            NewName = input("What new name do you want to replace it with? ")
-            with open("contactinfo.txt") as r:
-                text = r.read().replace(ReplaceCon, NewName)
-            with open("contactinfo.txt", "w") as w:
-                w.write(text)
+
+        NewName = input("What new name do you want to replace it with? ")
+        with open("contactinfo.txt") as r:
+            text = r.read().replace(ReplaceCon, NewName)
+        with open("contactinfo.txt", "w") as w:
+            w.write(text)
     else:
         print("Program closed")
 
-        #if ReplaceConInfo1 == ("Phone Number"):
 
-           # NewPhoneNum = input("What new number do you want to change it to? ")
-            #with open("contactinfo.txt") as r:
-               # text = r.read().replace(ReplaceCon, NewPhoneNum)
-           # with open("contactinfo.txt", "w") as w:
-               # w.write(text)
 
 
 
